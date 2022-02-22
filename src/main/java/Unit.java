@@ -1,8 +1,8 @@
-public class Unit {
+public enum Unit {
+    KILOGRAM(1000000),GRAM(1000),MILLIGRAM(1);
+    final double conversionFactor;
 
-    protected double conversionFactor;
-
-    protected Unit(double conversionFactor) {
+    Unit(double conversionFactor) {
         this.conversionFactor = conversionFactor;
     }
 
