@@ -20,6 +20,6 @@ public class Weight {
 
     public Weight sum(Weight obj) {
         double sum = this.unit.convertToBase(this.value) + obj.unit.convertToBase(obj.value);
-        return new Weight(sum / this.unit.conversionFactor, this.unit);
+        return new Weight(sum / this.unit.conversionFactor(), this.unit);
     }
 }

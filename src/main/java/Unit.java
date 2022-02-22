@@ -1,12 +1,8 @@
-public enum Unit {
-    KILOGRAM(1000000),GRAM(1000),MILLIGRAM(1);
-    final double conversionFactor;
+public interface Unit {
 
-    Unit(double conversionFactor) {
-        this.conversionFactor = conversionFactor;
-    }
+    double conversionFactor();
 
-    public double convertToBase(double value) {
-        return value * conversionFactor;
+    default double convertToBase(double value) {
+        return value * conversionFactor();
     }
 }
